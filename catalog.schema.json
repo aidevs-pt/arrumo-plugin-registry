@@ -50,7 +50,9 @@
                   "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
                 },
                 "manifestSchemaVersion": {
-                  "const": 1
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4294967295
                 },
                 "packageUrl": {
                   "type": "string",

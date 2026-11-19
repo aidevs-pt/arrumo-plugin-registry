@@ -7,3 +7,5 @@ This repository is being initialized. See the Arrumo workspace roadmap for imple
 Copyright © 2026 DEVS AI Unipessoal LDA. Licensed under the [GNU Affero General Public License v3.0](LICENSE).
 
 For custom AI solutions for your company, visit [DEVS AI](https://aidevs.pt).
+
+The [catalog](catalog.json) records planned defaults. Entries identify source repositories. Installation will require published releases and compatibility and integrity metadata.

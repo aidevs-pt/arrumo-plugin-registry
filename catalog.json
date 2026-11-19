@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "plugins": [
+    {
+      "id": "auto-dubbing",
+      "repository": "https://github.com/aidevs-pt/arrumo-plugin-auto-dubbing",
+      "default": true
+    },
+    {
+      "id": "claude-code",
+      "repository": "https://github.com/aidevs-pt/arrumo-plugin-claude-code",
+      "default": true
+    },
+    {
+      "id": "codex",
+      "repository": "https://github.com/aidevs-pt/arrumo-plugin-codex",
+      "default": true
+    },
+    {
+      "id": "elevenlabs",
+      "repository": "https://github.com/aidevs-pt/arrumo-plugin-elevenlabs",
+      "default": true
+    },
+    {
+      "id": "gemini",
+      "repository": "https://github.com/aidevs-pt/arrumo-plugin-gemini",
+      "default": true
+    },
+    {
+      "id": "higgsfield",
+      "repository": "https://github.com/aidevs-pt/arrumo-plugin-higgsfield",
+      "default": true
+    },
+    {
+      "id": "openai",
+      "repository": "https://github.com/aidevs-pt/arrumo-plugin-openai",
+      "default": true
+    }
+  ]
+}

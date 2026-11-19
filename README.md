@@ -17,3 +17,9 @@ The [catalog schema](catalog.schema.json) describes the format consumed by Arrum
 Arrumo can use a local catalog snapshot to verify an explicitly selected release against a local ZIP. The plugin ID inside the archive must match the selected catalog entry. Obtain the catalog independently from the package so the checksum can detect a substituted archive.
 
 Catalogs can list releases for different manifest schema versions. Hosts can display all available versions and should refuse to install releases requiring a manifest schema they do not support.
+
+## Validate changes
+
+Install `jsonschema` for Python and run `python tools/check_catalog.py catalog.json`. CI runs this check on pushes and pull requests. It checks the catalog schema, IDs, release versions, source URLs, and checksums.
+
+Before adding a release, run `python tools/check_catalog.py catalog.json --release <plugin-id> <version> <package.zip>` against the exact ZIP. This compares the file's SHA-256, plugin ID, and manifest schema version with the catalog. Test the ZIP in Arrumo as well to exercise the host's package validation.

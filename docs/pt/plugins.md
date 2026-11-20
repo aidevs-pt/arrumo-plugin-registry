@@ -6,7 +6,7 @@ Abre o README de cada plugin para consultar a configuração, as funcionalidades
 
 [Catálogo de plugins](../../catalog.json)
 
-- [Auto-Dubbing](https://github.com/aidevs-pt/arrumo-plugin-auto-dubbing/blob/main/README.md)
+- [Auto-Dubbing](https://github.com/aidevs-pt/arrumo-plugin-auto-dubbing/blob/main/docs/pt/dub-a-video.md)
 - [Claude Code](https://github.com/aidevs-pt/arrumo-plugin-claude-code/blob/main/docs/pt/setup.md)
 - [Codex](https://github.com/aidevs-pt/arrumo-plugin-codex/blob/main/docs/pt/setup.md)
 - [ElevenLabs](https://github.com/aidevs-pt/arrumo-plugin-elevenlabs/blob/main/docs/pt/transcription.md)

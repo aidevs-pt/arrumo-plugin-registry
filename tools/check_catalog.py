@@ -63,7 +63,7 @@ def check_version(value):
         raise ValueError(f"Invalid SemVer prerelease version: {value}")
 
 
-def load_catalog(path):
+def read_catalog(path):
     with path.open("rb") as file:
         data = read_limited(file, MAX_CATALOG, "Catalog")
     catalog = json.loads(data.decode("utf-8"), object_pairs_hook=unique_fields)
@@ -92,7 +92,12 @@ def load_catalog(path):
             check_url(release["packageUrl"])
             releases[version] = release
         plugins[plugin_id] = releases
-    return plugins
+    return catalog, plugins
+
+
+def load_catalog(path):
+    _, releases = read_catalog(path)
+    return releases
 
 
 def verify_zip(path, plugin_id, release):
@@ -116,6 +121,7 @@ def verify_zip(path, plugin_id, release):
     version = manifest.get("schemaVersion")
     if type(version) is not int or version != release["manifestSchemaVersion"]:
         raise ValueError("Manifest schema version differs from the catalog")
+    return data
 
 
 def main():

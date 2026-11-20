@@ -6,6 +6,7 @@ import unittest
 import zipfile
 
 from tools.check_catalog import load_catalog, verify_zip
+from tools.stage_defaults import stage_defaults
 
 
 class RegistryTest(unittest.TestCase):
@@ -71,3 +72,36 @@ class RegistryTest(unittest.TestCase):
         self.write_catalog(self.plugin)
         with self.assertRaisesRegex(ValueError, "SemVer"):
             load_catalog(self.catalog)
+
+    def test_stages_exact_selected_default_bytes(self):
+        self.write_catalog(dict(self.plugin, default=True))
+        output = self.root / "staged"
+        selection = [("fixture", "1.0.0", self.archive)]
+        stage_defaults(self.catalog, output, selection)
+        self.assertEqual((output / "fixture.zip").read_bytes(), self.archive.read_bytes())
+        with self.assertRaises(FileExistsError):
+            stage_defaults(self.catalog, output, selection)
+
+    def test_rejects_non_defaults_and_ambiguous_release_digests(self):
+        self.write_catalog(self.plugin)
+        output = self.root / "staged"
+        selection = [("fixture", "1.0.0", self.archive)]
+        with self.assertRaisesRegex(ValueError, "default list"):
+            stage_defaults(self.catalog, output, selection)
+        second_release = dict(self.release, version="2.0.0")
+        self.write_catalog(dict(self.plugin, default=True, releases=[self.release, second_release]))
+        with self.assertRaisesRegex(ValueError, "multiple releases"):
+            stage_defaults(self.catalog, output, selection)
+        self.assertFalse(output.exists())
+
+    def test_failed_batch_leaves_no_partial_output(self):
+        other = dict(self.plugin, id="other", default=True)
+        self.write_catalog(dict(self.plugin, default=True), other)
+        output = self.root / "staged"
+        with self.assertRaisesRegex(ValueError, "Plugin ID"):
+            stage_defaults(self.catalog, output, [
+                ("fixture", "1.0.0", self.archive),
+                ("other", "1.0.0", self.archive),
+            ])
+        self.assertFalse(output.exists())
+        self.assertFalse(list(self.root.glob(".arrumo-defaults-*")))

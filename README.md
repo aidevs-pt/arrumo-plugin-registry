@@ -2,13 +2,11 @@
 
 The official Arrumo plugin catalog and default installation list.
 
-This repository is being initialized. See the Arrumo workspace roadmap for implementation status.
-
 Copyright © 2026 DEVS AI Unipessoal LDA. Licensed under the [GNU Affero General Public License v3.0](LICENSE).
 
 For custom AI solutions for your company, visit [DEVS AI](https://aidevs.pt).
 
-The [catalog](catalog.json) records planned defaults. Entries identify source repositories. Installation will require published releases and compatibility and integrity metadata.
+The [catalog](catalog.json) identifies source repositories and selects the defaults to include in editor builds. Published package records specify the supported manifest version and the exact ZIP digest.
 
 ## Release entries
 
@@ -23,3 +21,14 @@ Catalogs can list releases for different manifest schema versions. Hosts can dis
 Install `jsonschema` for Python and run `python tools/check_catalog.py catalog.json`. CI runs this check on pushes and pull requests. It checks the catalog schema, IDs, release versions, source URLs, and checksums.
 
 Before adding a release, run `python tools/check_catalog.py catalog.json --release <plugin-id> <version> <package.zip>` against the exact ZIP. This compares the file's SHA-256, plugin ID, and manifest schema version with the catalog. Test the ZIP in Arrumo as well to exercise the host's package validation.
+
+## Stage defaults for an editor build
+
+Use the catalog snapshot and exact downloaded ZIPs as build inputs. Repeat `--release` for each executable default selected for this build. Entries that ship as manifest descriptors alone require no ZIP.
+
+```sh
+python tools/stage_defaults.py catalog.json /tmp/arrumo-default-packages \
+  --release example-plugin 1.0.0 /path/to/downloaded-release.zip
+```
+
+The command writes the verified bytes to `<plugin-id>.zip` in a new directory after every selection passes validation. Set `ARRUMO_PLUGIN_REGISTRY` to the absolute path to the catalog snapshot and `ARRUMO_PLUGIN_RELEASE_ROOT` to the staged directory when building the editor. The matching plugin checkouts provide the default manifests. The editor rechecks the digest and records release provenance.

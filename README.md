@@ -24,7 +24,7 @@ Before adding a release, run `python tools/check_catalog.py catalog.json --relea
 
 ## Stage defaults for an editor build
 
-Use the catalog snapshot and exact downloaded ZIPs as build inputs. Repeat `--release` for each executable default selected for this build. Entries that ship as manifest descriptors alone require no ZIP.
+Use the catalog snapshot and exact downloaded ZIPs as build inputs. Repeat `--release` for each default with executable code or provider adapters selected for this build. Catalog entries that only supply manifest metadata require no ZIP.
 
 ```sh
 python tools/stage_defaults.py catalog.json /tmp/arrumo-default-packages \

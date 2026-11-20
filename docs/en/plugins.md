@@ -7,8 +7,8 @@ Open a plugin’s README for setup, capabilities, and implementation status. The
 [Plugin catalog](../../catalog.json)
 
 - [Auto-Dubbing](https://github.com/aidevs-pt/arrumo-plugin-auto-dubbing/blob/main/README.md)
-- [Claude Code](https://github.com/aidevs-pt/arrumo-plugin-claude-code/blob/main/README.md)
-- [Codex](https://github.com/aidevs-pt/arrumo-plugin-codex/blob/main/README.md)
+- [Claude Code](https://github.com/aidevs-pt/arrumo-plugin-claude-code/blob/main/docs/en/setup.md)
+- [Codex](https://github.com/aidevs-pt/arrumo-plugin-codex/blob/main/docs/en/setup.md)
 - [ElevenLabs](https://github.com/aidevs-pt/arrumo-plugin-elevenlabs/blob/main/README.md)
 - [Gemini](https://github.com/aidevs-pt/arrumo-plugin-gemini/blob/main/README.md)
 - [Higgsfield](https://github.com/aidevs-pt/arrumo-plugin-higgsfield/blob/main/README.md)

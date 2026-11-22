@@ -10,7 +10,7 @@ The [catalog](catalog.json) identifies source repositories and selects the defau
 
 ## Plugin guides
 
-[English](docs/en/plugins.md) · [Español](docs/es/plugins.md) · [Português](docs/pt/plugins.md)
+[English](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/en/plugins/index.md) · [Español](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/es/plugins/index.md) · [Português](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/pt/plugins/index.md)
 
 ## Release entries
 

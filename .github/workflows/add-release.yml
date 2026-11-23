@@ -1,0 +1,54 @@
+# Records a plugin release, published by that plugin's Release workflow, in catalog.json. It
+# downloads the exact published ZIP, adds its version, schema and SHA-256, verifies the entry and
+# commits it to main.
+name: Add plugin release
+on:
+  workflow_dispatch:
+    inputs:
+      plugin:
+        description: Plugin
+        required: true
+        type: choice
+        options: [auto-dubbing, claude-code, codex, elevenlabs, gemini, higgsfield, openai]
+      version:
+        description: "Published version, such as 1.0.0"
+        required: true
+concurrency: catalog
+permissions:
+  contents: write
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    env:
+      PLUGIN: ${{ inputs.plugin }}
+      VERSION: ${{ inputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: python -m pip install jsonschema==4.19.2
+      - name: Download the published package
+        env:
+          GH_TOKEN: ${{ secrets.ARRUMO_REPOS_TOKEN || github.token }}
+        run: |
+          if ! printf '%s' "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+            echo "::error::Give a version such as 1.0.0"; exit 1
+          fi
+          repository=$(jq -r --arg id "$PLUGIN" '.plugins[] | select(.id == $id) | .repository' catalog.json)
+          echo "REPOSITORY=${repository#https://github.com/}" >> "$GITHUB_ENV"
+          gh release download "v$VERSION" --repo "${repository#https://github.com/}" \
+            --pattern "$PLUGIN-$VERSION.zip" --dir "$RUNNER_TEMP"
+      - name: Add and verify the release
+        run: |
+          package="$RUNNER_TEMP/$PLUGIN-$VERSION.zip"
+          python tools/add_release.py catalog.json "$PLUGIN" "$VERSION" "$package" \
+            "https://github.com/$REPOSITORY/releases/download/v$VERSION/$PLUGIN-$VERSION.zip"
+          python tools/check_catalog.py catalog.json --release "$PLUGIN" "$VERSION" "$package"
+          python -m unittest discover -s tests
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "feat(catalog): add $PLUGIN $VERSION"
+          git push origin HEAD:main

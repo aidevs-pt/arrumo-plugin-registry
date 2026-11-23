@@ -5,6 +5,7 @@ import tempfile
 import unittest
 import zipfile
 
+from tools.add_release import add_release
 from tools.check_catalog import load_catalog, verify_zip
 from tools.stage_defaults import stage_defaults
 
@@ -54,6 +55,19 @@ class RegistryTest(unittest.TestCase):
         self.write_package("fixture", 2)
         with self.assertRaisesRegex(ValueError, "schema version"):
             verify_zip(self.archive, "fixture", self.release)
+
+    def test_adds_a_published_release_that_verifies(self):
+        plugin = {key: value for key, value in self.plugin.items() if key != "releases"}
+        self.write_catalog(plugin)
+        url = "https://example.org/fixture-1.0.0.zip"
+        added = add_release(self.catalog, "fixture", "1.0.0", self.archive, url)
+        self.assertEqual(added["sha256"], self.release["sha256"])
+        catalog = load_catalog(self.catalog)
+        verify_zip(self.archive, "fixture", catalog["fixture"]["1.0.0"])
+        with self.assertRaisesRegex(ValueError, "already in the catalog"):
+            add_release(self.catalog, "fixture", "1.0.0", self.archive, url)
+        with self.assertRaisesRegex(ValueError, "no plugin missing"):
+            add_release(self.catalog, "missing", "1.0.0", self.archive, url)
 
     def test_rejects_duplicate_plugins_and_releases(self):
         self.write_catalog(self.plugin, self.plugin)

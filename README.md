@@ -58,6 +58,10 @@ python tools/stage_defaults.py catalog.json /tmp/arrumo-default-packages \
 
 The command writes the verified bytes to `<plugin-id>.zip` in a new directory after every selection passes validation. Set `ARRUMO_PLUGIN_REGISTRY` to the absolute path to the catalog snapshot and `ARRUMO_PLUGIN_RELEASE_ROOT` to the staged directory when building the editor. The matching plugin checkouts provide the default manifests. The editor rechecks the digest and records release provenance.
 
+## Contributing
+
+Contributions are welcome: read [CONTRIBUTING.md](CONTRIBUTING.md) and our [Code of Conduct](CODE_OF_CONDUCT.md). Report security problems privately as described in [SECURITY.md](SECURITY.md).
+
 ## License
 
 Copyright © 2026 DEVS AI Unipessoal LDA. Licensed under the [GNU Affero General Public License v3.0](LICENSE). Part of [Arrumo AI Video Editor](https://github.com/aidevs-pt/arrumo-video-editor), built by [DEVS AI](https://aidevs.pt), who make custom AI solutions for companies.

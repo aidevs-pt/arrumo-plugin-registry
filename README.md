@@ -27,7 +27,7 @@
 | <img src="https://raw.githubusercontent.com/aidevs-pt/arrumo-plugin-gemini/main/icon.svg" width="28" alt=""> | [Gemini](https://github.com/aidevs-pt/arrumo-plugin-gemini) | Images | [Images](https://www.aidevs.pt/tools/arrumo/docs/plugins/gemini/images) |
 | <img src="https://raw.githubusercontent.com/aidevs-pt/arrumo-plugin-auto-dubbing/main/icon.svg" width="28" alt=""> | [Auto-Dubbing](https://github.com/aidevs-pt/arrumo-plugin-auto-dubbing) | Dubbed versions and translated subtitles | [Dub a video](https://www.aidevs.pt/tools/arrumo/docs/plugins/auto-dubbing/dub-a-video) |
 
-Every plugin above ships with Arrumo and is turned on in a fresh install. Guides are in [English](https://www.aidevs.pt/tools/arrumo/docs/plugins), [Español](https://www.aidevs.pt/es/tools/arrumo/docs/plugins) and [Português](https://www.aidevs.pt/pt/tools/arrumo/docs/plugins). To write your own, start with the [Plugin SDK](https://github.com/aidevs-pt/arrumo-plugin-sdk).
+Every plugin above comes installed with Arrumo; creators turn each one on or off in **Settings › Plugins**. Guides are in [English](https://www.aidevs.pt/tools/arrumo/docs/plugins), [Español](https://www.aidevs.pt/es/tools/arrumo/docs/plugins) and [Português](https://www.aidevs.pt/pt/tools/arrumo/docs/plugins). To write your own, start with the [Plugin SDK](https://github.com/aidevs-pt/arrumo-plugin-sdk).
 
 ## The catalog
 

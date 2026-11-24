@@ -17,7 +17,15 @@
     {
       "id": "claude-code",
       "repository": "https://github.com/aidevs-pt/arrumo-plugin-claude-code",
-      "default": true
+      "default": true,
+      "releases": [
+        {
+          "version": "0.1.0",
+          "manifestSchemaVersion": 14,
+          "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-claude-code/releases/download/v0.1.0/claude-code-0.1.0.zip",
+          "sha256": "b8fe8773617ca30085a057a1774b6c9078f57cf53edcb2475f3c6d4f94da8a53"
+        }
+      ]
     },
     {
       "id": "codex",

@@ -24,6 +24,9 @@ jobs:
       VERSION: ${{ inputs.version }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          # "Protect main" exempts this deploy key, so the catalog entry can be pushed.
+          ssh-key: ${{ secrets.RELEASE_DEPLOY_KEY }}
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"

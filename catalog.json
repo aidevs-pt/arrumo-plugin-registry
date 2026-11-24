@@ -43,7 +43,15 @@
     {
       "id": "elevenlabs",
       "repository": "https://github.com/aidevs-pt/arrumo-plugin-elevenlabs",
-      "default": true
+      "default": true,
+      "releases": [
+        {
+          "version": "0.1.0",
+          "manifestSchemaVersion": 10,
+          "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-elevenlabs/releases/download/v0.1.0/elevenlabs-0.1.0.zip",
+          "sha256": "3a1001b69d2a041cb512c76cb897fdaaf46ee24d958de9fc53debee2dec9bb49"
+        }
+      ]
     },
     {
       "id": "gemini",

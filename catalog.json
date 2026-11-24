@@ -30,7 +30,15 @@
     {
       "id": "codex",
       "repository": "https://github.com/aidevs-pt/arrumo-plugin-codex",
-      "default": true
+      "default": true,
+      "releases": [
+        {
+          "version": "0.1.0",
+          "manifestSchemaVersion": 14,
+          "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-codex/releases/download/v0.1.0/codex-0.1.0.zip",
+          "sha256": "add85c9f4a4678bd143c2a4f7b63824f081d3597f30d0deadfd9765916fa9a97"
+        }
+      ]
     },
     {
       "id": "elevenlabs",

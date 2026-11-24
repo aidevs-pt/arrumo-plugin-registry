@@ -82,7 +82,15 @@
     {
       "id": "openai",
       "repository": "https://github.com/aidevs-pt/arrumo-plugin-openai",
-      "default": true
+      "default": true,
+      "releases": [
+        {
+          "version": "0.1.0",
+          "manifestSchemaVersion": 10,
+          "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-openai/releases/download/v0.1.0/openai-0.1.0.zip",
+          "sha256": "769cb3efef180b2b53f933824b73cbede438e762706aa58becaff569eb3d437c"
+        }
+      ]
     }
   ]
 }

@@ -69,7 +69,15 @@
     {
       "id": "higgsfield",
       "repository": "https://github.com/aidevs-pt/arrumo-plugin-higgsfield",
-      "default": true
+      "default": true,
+      "releases": [
+        {
+          "version": "0.1.0",
+          "manifestSchemaVersion": 10,
+          "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-higgsfield/releases/download/v0.1.0/higgsfield-0.1.0.zip",
+          "sha256": "d62326c9b77527ec80b289c7e193b76c24e7b707d32889a57d66a17dbbbc34e4"
+        }
+      ]
     },
     {
       "id": "openai",

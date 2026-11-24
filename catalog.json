@@ -56,7 +56,15 @@
     {
       "id": "gemini",
       "repository": "https://github.com/aidevs-pt/arrumo-plugin-gemini",
-      "default": true
+      "default": true,
+      "releases": [
+        {
+          "version": "0.1.0",
+          "manifestSchemaVersion": 10,
+          "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-gemini/releases/download/v0.1.0/gemini-0.1.0.zip",
+          "sha256": "fab59e56177d26024f7ccd3c3ecbc7adad6c20910176046b5bcdb76498375ffd"
+        }
+      ]
     },
     {
       "id": "higgsfield",

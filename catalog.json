@@ -4,7 +4,15 @@
     {
       "id": "auto-dubbing",
       "repository": "https://github.com/aidevs-pt/arrumo-plugin-auto-dubbing",
-      "default": true
+      "default": true,
+      "releases": [
+        {
+          "version": "0.1.0",
+          "manifestSchemaVersion": 9,
+          "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-auto-dubbing/releases/download/v0.1.0/auto-dubbing-0.1.0.zip",
+          "sha256": "df7359dfb938e8eece17bdc896c12d7e24a27d8b66bccbf05ed75def0a68b5b3"
+        }
+      ]
     },
     {
       "id": "claude-code",

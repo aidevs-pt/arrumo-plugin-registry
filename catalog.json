@@ -43,6 +43,12 @@
           "manifestSchemaVersion": 14,
           "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-codex/releases/download/v0.1.0/codex-0.1.0.zip",
           "sha256": "add85c9f4a4678bd143c2a4f7b63824f081d3597f30d0deadfd9765916fa9a97"
+        },
+        {
+          "version": "0.1.1",
+          "manifestSchemaVersion": 15,
+          "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-codex/releases/download/v0.1.1/codex-0.1.1.zip",
+          "sha256": "6f89e8d29b35ad23c5feb0eb9e42f83fc8cf33b901c72cffa3a834236a1d7740"
         }
       ]
     },

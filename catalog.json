@@ -88,6 +88,12 @@
           "manifestSchemaVersion": 10,
           "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-higgsfield/releases/download/v0.1.0/higgsfield-0.1.0.zip",
           "sha256": "d62326c9b77527ec80b289c7e193b76c24e7b707d32889a57d66a17dbbbc34e4"
+        },
+        {
+          "version": "0.2.0",
+          "manifestSchemaVersion": 10,
+          "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-higgsfield/releases/download/v0.2.0/higgsfield-0.2.0.zip",
+          "sha256": "8bc768f5e7f7dfcb25c7b8513ab58723ae0e02363423c7b6821c3f0822d9f3ba"
         }
       ]
     },

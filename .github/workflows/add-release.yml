@@ -19,6 +19,8 @@ permissions:
 jobs:
   add:
     runs-on: ubuntu-latest
+    # Its secrets, such as the deploy key, are only given to runs from main.
+    environment: release
     env:
       PLUGIN: ${{ inputs.plugin }}
       VERSION: ${{ inputs.version }}

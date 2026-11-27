@@ -17,7 +17,15 @@
     {
       "id": "canvas",
       "repository": "https://github.com/aidevs-pt/arrumo-plugin-canvas",
-      "default": true
+      "default": true,
+      "releases": [
+        {
+          "version": "0.1.0",
+          "manifestSchemaVersion": 17,
+          "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-canvas/releases/download/v0.1.0/canvas-0.1.0.zip",
+          "sha256": "dd07c66a2b72d284b793c50fd8b1bc23449f77efbc9cb7df84f6ae9194623566"
+        }
+      ]
     },
     {
       "id": "claude-code",

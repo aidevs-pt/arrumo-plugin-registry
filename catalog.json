@@ -49,6 +49,12 @@
           "manifestSchemaVersion": 15,
           "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-claude-code/releases/download/v0.1.2/claude-code-0.1.2.zip",
           "sha256": "52396d6c8a86dd4bc1d5a7a4fe318076bb55b14fe114f46b2c29273c9c97ffec"
+        },
+        {
+          "version": "0.1.3",
+          "manifestSchemaVersion": 16,
+          "packageUrl": "https://github.com/aidevs-pt/arrumo-plugin-claude-code/releases/download/v0.1.3/claude-code-0.1.3.zip",
+          "sha256": "663ee7f6a120bb9594e36489e93d536cdef15e334952e5642aac69e7d56dd8c6"
         }
       ]
     },

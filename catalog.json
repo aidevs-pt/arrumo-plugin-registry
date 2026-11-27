@@ -15,6 +15,11 @@
       ]
     },
     {
+      "id": "canvas",
+      "repository": "https://github.com/aidevs-pt/arrumo-plugin-canvas",
+      "default": true
+    },
+    {
       "id": "claude-code",
       "repository": "https://github.com/aidevs-pt/arrumo-plugin-claude-code",
       "default": true,

@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="License: AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-2337B4"></a>
-  <img alt="Official plugins: 7" src="https://img.shields.io/badge/official%20plugins-7-111">
+  <img alt="Official plugins: 8" src="https://img.shields.io/badge/official%20plugins-8-111">
 </p>
 
 <p align="center">
@@ -26,6 +26,7 @@
 | <img src="https://raw.githubusercontent.com/aidevs-pt/arrumo-plugin-openai/main/icon.svg" width="28" alt=""> | [OpenAI](https://github.com/aidevs-pt/arrumo-plugin-openai) | Transcription with timestamps and images | [Images](https://www.aidevs.pt/tools/arrumo/docs/plugins/openai/images) |
 | <img src="https://raw.githubusercontent.com/aidevs-pt/arrumo-plugin-gemini/main/icon.svg" width="28" alt=""> | [Gemini](https://github.com/aidevs-pt/arrumo-plugin-gemini) | Images | [Images](https://www.aidevs.pt/tools/arrumo/docs/plugins/gemini/images) |
 | <img src="https://raw.githubusercontent.com/aidevs-pt/arrumo-plugin-auto-dubbing/main/icon.svg" width="28" alt=""> | [Auto-Dubbing](https://github.com/aidevs-pt/arrumo-plugin-auto-dubbing) | Dubbed versions and translated subtitles | [Dub a video](https://www.aidevs.pt/tools/arrumo/docs/plugins/auto-dubbing/dub-a-video) |
+| <img src="https://raw.githubusercontent.com/aidevs-pt/arrumo-plugin-canvas/main/icon.svg" width="28" alt=""> | [Canvas layers](https://github.com/aidevs-pt/arrumo-plugin-canvas) | 3D, charts, particles, routes, Lottie and shader effects in animations | [Canvas layers](https://www.aidevs.pt/tools/arrumo/docs/plugins/canvas/canvas-layers) |
 
 Every plugin above comes installed with Arrumo; creators turn each one on or off in **Settings › Plugins**. Guides are in [English](https://www.aidevs.pt/tools/arrumo/docs/plugins), [Español](https://www.aidevs.pt/es/tools/arrumo/docs/plugins) and [Português](https://www.aidevs.pt/pt/tools/arrumo/docs/plugins). To write your own, start with the [Plugin SDK](https://github.com/aidevs-pt/arrumo-plugin-sdk).
 

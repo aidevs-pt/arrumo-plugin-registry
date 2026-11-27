@@ -9,7 +9,7 @@ on:
         description: Plugin
         required: true
         type: choice
-        options: [auto-dubbing, claude-code, codex, elevenlabs, gemini, higgsfield, openai]
+        options: [auto-dubbing, canvas, claude-code, codex, elevenlabs, gemini, higgsfield, openai]
       version:
         description: "Published version, such as 1.0.0"
         required: true

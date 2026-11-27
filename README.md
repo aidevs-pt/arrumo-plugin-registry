@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="License: AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-2337B4"></a>
-  <img alt="Official plugins: 7" src="https://img.shields.io/badge/official%20plugins-7-111">
+  <img alt="Official plugins: 8" src="https://img.shields.io/badge/official%20plugins-8-111">
 </p>
 
 <p align="center">
